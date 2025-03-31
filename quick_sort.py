@@ -1,7 +1,7 @@
 import random
 
-n = 200
-test_arr = random.sample(range(1, 201), n)
+n = 20
+test_arr = random.sample(range(1, 21), n)
 print(f'Unsorted array: {test_arr}')
 
 
@@ -9,7 +9,7 @@ def quicksort(arr):
     if len(arr) <= 1:
         return arr
 
-    pivot = arr.pop(0)
+    pivot = arr.pop(random.choice(range(len(arr))))
     smaller = []
     larger = []
 
